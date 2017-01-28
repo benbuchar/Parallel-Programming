@@ -106,7 +106,7 @@ public class BoxMaster extends RecursiveTask<ArrayList<MyLine>> {
             }
 
             /**
-             * If all moves were considered equally good, it the BoxMaster
+             * If all moves were considered equally good, the BoxMaster chooses
              * a random one.
              */
             if(count == state.movesLeft.size()){
