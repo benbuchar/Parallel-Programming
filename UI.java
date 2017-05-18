@@ -26,7 +26,7 @@ public class UI extends JFrame implements ActionListener, MouseListener {
     int numberOfBoxesFilled;
 
 
-    JPanel throneRoom;
+    JPanel gamePanel;
 
     public UI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -35,11 +35,11 @@ public class UI extends JFrame implements ActionListener, MouseListener {
 
         lines = new int[SIZE][SIZE];
 
-        throneRoom = new ThroneRoom();
-        throneRoom.setFocusable(true);
-        throneRoom.addMouseListener(this);
+        gamePanel = new GamePanel();
+        gamePanel.setFocusable(true);
+        gamePanel.addMouseListener(this);
 
-        add(throneRoom, BorderLayout.CENTER);
+        add(gamePanel, BorderLayout.CENTER);
         numberOfBoxesFilled = 0;
 
         setSize(XDIM, YDIM);
@@ -193,15 +193,15 @@ public class UI extends JFrame implements ActionListener, MouseListener {
 
     }
 
-    class ThroneRoom extends JPanel {
+    class GamePanel extends JPanel {
 
-        public ThroneRoom(){
+        public GamePanel(){
 
             initializeState();
 
             Thread painter = new Thread(()-> {
                 for(;;){
-                        throneRoom.repaint();
+                        gamePanel.repaint();
 
 
                 }
