@@ -158,7 +158,7 @@ public class BoxMaster extends RecursiveTask<ArrayList<MyLine>> {
                 }
             }
         }
-
+ 
         /**
          * If all moves resulted in the same score for Player 2, a random
          * move is chosen.
