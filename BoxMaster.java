@@ -14,7 +14,7 @@ public class BoxMaster extends RecursiveTask<ArrayList<MyLine>> {
         this.depth = depth;
         State stateCopy = state;
         this.state = stateCopy;
-    }
+    } 
 
     /**
      * The BoxMaster's recursive decomposition algorithm.
